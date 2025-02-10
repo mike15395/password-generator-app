@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red:#F64A4A;
+    --very-dark-grey:#18171F;
+    --dark-grey:#24232C;
+    --grey:#817D92;
+    --white:#E6E5EA;
+    --neon-green:#A4FFAF;
+    --yellow:#F8CD65;
+    --orange:#FB7C58;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--very-dark-grey);
+    color: var(--white);
+    font-family: 'JetBrains Mono';
+}
+
+main{
+    width: 35vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+header{
+    color: var(--grey);
+}
+
+.password-info-container{
+    background-color: var(--dark-grey);
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-section {
+    background-color: var(--dark-grey);
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-container{
+    display: flex;
+   justify-content: space-between;
+    width: 100%;
+}
+
+.password-text{
+    font-size: 24px;
+    font-weight: bold;
+    width:70%;
+}
+
+#copy-password{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    
+}
+.copied-text{
+    color: var(--neon-green);
+    visibility: hidden;
+}
+#copy-icon{
+    cursor: pointer;
+    align-items: flex-end;
+}
+
+.character-length{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.character-length-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.character-length-text #character-length-value{
+    font-size: 24px;
+    color: var(--neon-green);
+}
+
+
+#character-length-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, var(--neon-green) 50%, #18161F 50%);
+    /* border-radius: 5px; */
+    outline: none;
+    cursor: pointer;
+    border: none;
+  }
+  
+  /* WebKit browsers (Chrome, Safari) */
+  #character-length-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #E7E7E7;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  #character-length-input::-webkit-slider-thumb:hover {
+    background: var(--dark-grey); /* Dark grey */
+    border: 2px solid var(--neon-green);
+  }
+
+  .password-checks-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .password-checks-container div{
+    display: flex;
+    gap:20px;
+  }
+  /* Hide default checkbox */
+.custom-checkbox {
+    -webkit-appearance: none; 
+    appearance: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    cursor: pointer;
+  }
+  
+  /* Change background when checked */
+  .custom-checkbox:checked {
+    background: var(--neon-green);
+    border: 2px solid var(--neon-green);
+    
+  }
+  
+  
+  /* Change background on hover */
+  .custom-checkbox:hover {
+    border: 2px solid var(--neon-green);
+  }
+  
+  /* Add a checkmark using pseudo-element */
+  .custom-checkbox:checked::after {
+    content: "✔";
+    color: var(--dark-grey);
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.password-strength-container{
+    background-color: var(--very-dark-grey);
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.strength-text{
+    color: var(--grey);
+    font-weight: bold;
+}
+.strength-output-container{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+#strength-output{
+    font-weight: bold;
+    font-size: 24px;
+}
+.strength-output-bars{
+    display: flex;
+    gap: 5px;
+}
+
+.bar{
+    border: 2px solid var(--white);
+    height: 30px;
+    width: 0.5px;
+    padding: 3px;
+}
+
+.generate-password-button{
+    background-color: var(--neon-green);
+    padding: 5%;
+    color: var(--dark-grey);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'JetBrains Mono';
+    font-size: large;
+}
+
+.generate-password-button:hover{
+    background-color: var(--dark-grey);
+    border: 2px solid var(--neon-green);
+    color: var(--neon-green);
+}
+@media all and (max-width:768px){
+    .password-text{
+        font-size: 16px;
+    }
+}

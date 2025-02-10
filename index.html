@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+
+  <main>
+    <header>Password Generator</header>
+    <section class="header-section"> 
+      <div class="password-container">
+        <div class="password-text">
+
+        </div> 
+        <div id="copy-password">
+         <div class="copied-text">COPIED</div>
+         <div><img src="./assets/images/icon-copy.svg" alt="copy-icon" id="copy-icon" width="20" height="20"></div>
+        </div>
+       </div>
+    </section>
+    <section class="password-info-container">
+      <div class="character-length">
+        <div class="character-length-text"><span>Character Length</span> <span id="character-length-value"></span></div>
+        <input type="range" min="1" max="20" id="character-length-input">
+    </div>
+      <div class="password-checks-container">
+        <div>
+          <input type="checkbox" name="include-upper-case" id="include-upper-case" class="custom-checkbox">
+          <label for="include-upper-case">Include Uppercase Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" name="include-lower-case" id="include-lower-case"  class="custom-checkbox">
+          <label for="include-lower-case">Include Lowercase Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" name="include-numbers" id="include-numbers"  class="custom-checkbox">
+          <label for="include-numbers">Include Numbers</label>
+        </div>
+        <div>
+          <input type="checkbox" name="include-symbols" id="include-symbols"  class="custom-checkbox">
+          <label for="include-symbols">Include Symbols</label>
+        </div>
+      </div>
+      <div class="password-strength-container"><div class="strength-text">STRENGTH</div> 
+      <div class="strength-output-container">
+        <span id="strength-output"></span>
+        <span class="strength-output-bars">
+        <span class="bar" id="bar-1"></span>
+        <span class="bar" id="bar-2"></span>
+        <span class="bar" id="bar-3"></span>
+        <span class="bar" id="bar-4"></span>
+      </span></div></div>
+      <button class="generate-password-button">GENERATE -></button>
+    </section>
+  </main>
+<script src="./script.js"></script>
+</body>
+</html>
