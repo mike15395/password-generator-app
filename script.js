@@ -52,7 +52,7 @@ function passwordGenerator(passwordLength) {
 
   let password = "";
   let selectedChars = "";
-
+  copiedTextWord.style.visibility = "hidden";
   if (checkUpperCase.checked) {
     selectedChars += upperCaseLetters;
   }
